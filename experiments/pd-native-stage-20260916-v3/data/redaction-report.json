@@ -1,0 +1,23 @@
+{
+  "strategy": "strict_field_and_enum_allowlist_no_free_text_copy",
+  "requests_exported": 336,
+  "phase_count": 14,
+  "read_error_count": 0,
+  "inventory_skipped": {
+    "non_evidence_file": 5
+  },
+  "omitted": [
+    "authentication and all HTTP headers",
+    "endpoints, IPs, hostnames, usernames and paths",
+    "request messages, response content, reasoning, tool arguments and SSE events",
+    "raw error text, raw logs, model weights, images and archives"
+  ],
+  "preserved": [
+    "recorded transport/quality/usage states, including failure and in-flight",
+    "actual and expected token counts, output budget, latency and HTTP status",
+    "error existence/class/hash; raw detail remains local",
+    "source hashes and per-record source references"
+  ],
+  "id_policy": "request/case/source IDs are SHA-256-derived pseudonyms, not a claim of irreversible anonymization",
+  "raw_text_policy": "Raw artifacts and private source map remain local; publish only this output directory"
+}

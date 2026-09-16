@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "experiment": "pd-native-stage-20260916-v3",
+  "published_at_utc": "2026-09-16T05:51:24.072270+00:00",
+  "files": {
+    "REPORT.md": {
+      "bytes": 8103,
+      "sha256": "280cbcd54f889244e275b0bc1f93b3f4dedc64cc7f5dd5a3e7178c4d2b852ad7"
+    },
+    "WORKLOAD.md": {
+      "bytes": 13017,
+      "sha256": "cd4e106b0736ac28fe0de218477c78d9ff50dd1d51ae392358664c1a37ddafe3"
+    },
+    "data/README.md": {
+      "bytes": 4195,
+      "sha256": "0f5ccf1990d58fe3ea47c09ae0db1e0a40462d9d918178b66867cac63b2fe81d"
+    },
+    "data/metric-coverage.json": {
+      "bytes": 3378190,
+      "sha256": "76c62d731bbca1e5dcd238f48b38ea157509502c917747386fe16c1171e23eaf"
+    },
+    "data/metric-samples.jsonl.gz": {
+      "bytes": 20669948,
+      "sha256": "8f91faf012265f6d731fd1741ff2bf67c3e40f97fea6ae7216a7d4cab06c6446"
+    },
+    "data/performance.jsonl": {
+      "bytes": 360846,
+      "sha256": "a4b34228dc8fb59ad4e352ae22bce41d47271e86fc47a23cac50a57ec2d30b11"
+    },
+    "data/phase-summaries.json": {
+      "bytes": 95496,
+      "sha256": "c4742d4c56f7c0e757d85714b720f5f784c7d07851debeec772e611de60df1b6"
+    },
+    "data/provenance.json": {
+      "bytes": 449134,
+      "sha256": "4df5efd0de25a399fa5348655f6f89054ec5daa13dd157c810a2bc5c80cb7b09"
+    },
+    "data/redaction-report.json": {
+      "bytes": 990,
+      "sha256": "3368a03e168a756d07f74c3ed6d8b2c25b2a65046b2d4b5a7b7c5e162ac8062c"
+    },
+    "deployment-config.json": {
+      "bytes": 32858,
+      "sha256": "f237df6859160987a457e093df0f6ea94778622a47676bc3c170c701e5ba5f31"
+    },
+    "results.json": {
+      "bytes": 7525,
+      "sha256": "1d9fac0ae1e98bc81b106df55b140edd2cbb80ddded1e91c806437489ef244af"
+    }
+  },
+  "manifest_self_excluded": true,
+  "hash_algorithm": "SHA-256",
+  "final_original_archive": {
+    "sha256": "f2221aeccff4c9b98810167e342ae09c9c932affaa2d27d397f30eb5813d94e3",
+    "bytes": 34564594,
+    "verified_source_files": 1865,
+    "verified_source_bytes": 475823489,
+    "raw_archive_published": false
+  },
+  "publication_checks": {
+    "request_rows": 336,
+    "phase_count": 14,
+    "metric_samples": 2036835,
+    "six_capacity_rows_match_request_ledger": true,
+    "source_references_resolve": true,
+    "gzip_decompression_hash_verified": true,
+    "text_and_full_metric_privacy_scan_passed": true,
+    "source_inventory_entries": 1864
+  },
+  "scope": "Exploratory experiment data; not production acceptance"
+}
