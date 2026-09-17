@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment": "pd64-static-topology-screen-20260917-v1",
+  "published_at_utc": "2026-09-17",
+  "files": {
+    "REPORT.md": {
+      "bytes": 4452,
+      "sha256": "1175995c7fbcabd634ef222b8c752843c228c292d26256b4dfca77661bfe3a45"
+    },
+    "data/README.md": {
+      "bytes": 977,
+      "sha256": "5ae632bb1b621b7bbfc0ae277a46781a4a4fe8888f2c0098f6a0cb64b5551583"
+    },
+    "data/provenance.json": {
+      "bytes": 1613,
+      "sha256": "8442443588cd8343618b1a3bdc80500cf9ff02e63d4dc363cf09d4064979a873"
+    },
+    "data/results.json": {
+      "bytes": 123718,
+      "sha256": "c436c4f1d1c3b56a15bc482ca95274214168b827da0e5b6e1adbbc37d2900d32"
+    },
+    "data/service-profile-p16d48_ep16.json": {
+      "bytes": 37905,
+      "sha256": "6ce1fd7d0fe617e883b5ad7cce3c6f4aac91c9ddf7fbcd626eb6a7402c346f4a"
+    },
+    "data/service-profile-p16d48_ep8.json": {
+      "bytes": 57082,
+      "sha256": "2d7689e9df2818494c0f4571ea15aa8d15ea6930591416d1441cfba181adda9d"
+    },
+    "data/service-profile-p32d32_ep16.json": {
+      "bytes": 56862,
+      "sha256": "614becfb7be24e3cf573bd74efc62f69da7cf90dba210e2b1b7beaa6e4cd5b44"
+    },
+    "data/service-profile-p32d32_ep8.json": {
+      "bytes": 56850,
+      "sha256": "a6fc60fda8ed0a172d889eb030aff64417ee60298569fdc789e9955716415a9b"
+    }
+  },
+  "manifest_self_excluded": true,
+  "hash_algorithm": "SHA-256",
+  "publication_checks": {
+    "topologies": 4,
+    "full_formal_windows": 18,
+    "partial_reference_windows": 4,
+    "raw_prompts_published": false,
+    "raw_responses_published": false,
+    "machine_addresses_published": false,
+    "credentials_published": false
+  },
+  "scope": "64-card STATIC DSpark topology capacity/profile screen; not production acceptance"
+}

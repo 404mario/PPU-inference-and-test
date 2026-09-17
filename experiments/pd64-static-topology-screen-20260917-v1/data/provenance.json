@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "source_campaigns": {
+    "pd64-static-topology-screen-20260916-v2": {
+      "sha256": "93b3d7ebf633024ea808b11f414fa0a1e3c6989d9c679f6c7a4d16eeb537b66d",
+      "bytes": 2276023,
+      "published_full_campaign": false
+    },
+    "pd64-static-topology-screen-recovery-20260916-v1": {
+      "sha256": "61d73f034b1f2001140cbe68804c595a0d0c72250dffb099c660102978b96de0",
+      "bytes": 8449218,
+      "published_full_campaign": false
+    },
+    "pd64-static-topology-lowwarm-recovery-20260917-v2": {
+      "sha256": "08b0b853d2ac72c56688457f54320712328fc815b6d694fa903bd74daa8570a9",
+      "bytes": 4277946,
+      "published_full_campaign": false
+    }
+  },
+  "transform": "Only stage result summaries were selected. Preflight, server_info, cleanup, addresses, commands, internal paths, request prompts, responses, and logs were excluded.",
+  "profiles": {
+    "p16d48_ep8": {
+      "source_sha256": "2d7689e9df2818494c0f4571ea15aa8d15ea6930591416d1441cfba181adda9d",
+      "published_file": "data/service-profile-p16d48_ep8.json"
+    },
+    "p16d48_ep16": {
+      "source_sha256": "6ce1fd7d0fe617e883b5ad7cce3c6f4aac91c9ddf7fbcd626eb6a7402c346f4a",
+      "published_file": "data/service-profile-p16d48_ep16.json"
+    },
+    "p32d32_ep8": {
+      "source_sha256": "a6fc60fda8ed0a172d889eb030aff64417ee60298569fdc789e9955716415a9b",
+      "published_file": "data/service-profile-p32d32_ep8.json"
+    },
+    "p32d32_ep16": {
+      "source_sha256": "614becfb7be24e3cf573bd74efc62f69da7cf90dba210e2b1b7beaa6e4cd5b44",
+      "published_file": "data/service-profile-p32d32_ep16.json"
+    }
+  }
+}
