@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "experiment": "pd-p8d8-optimization-observability-20260918-v1",
+  "result_origin": {
+    "kind": "isolated internal experiment artifacts",
+    "analysis_artifact_names": [
+      "analysis-v1.json",
+      "benchmark.json"
+    ],
+    "availability": "retained in the private experiment archive; not copied to this public repository",
+    "public_normalization": "results.json was transcribed from completed-run aggregate analyses and rechecked against the experiment report",
+    "remote_paths_published": false
+  },
+  "runtime": {
+    "model": "DeepSeek-V4.1-Flash",
+    "mode": "native P/D STATIC DSpark",
+    "runtime_manifest_sha256": "68e70736c9fb122ec3bb38bdbdc307b59e95bc0fa9ac956f24116b1071fb6737"
+  },
+  "local_run_packages": {
+    "pd-d-metadata-gather-ab-20260918-v1": {
+      "ab_driver.py": {
+        "sha256": "af6a30a2896851b8f6748cf7d79d93010261d043b0784d69b310bb65253ad2e4",
+        "bytes": 1826
+      },
+      "bundle.json": {
+        "sha256": "06b6c1fc27f54a1f071db0a1ccdfbd9646e4e8e6c851b4058f78bc216f5841a6",
+        "bytes": 364
+      },
+      "commands.json": {
+        "sha256": "fdc16702df985d9f696b9b1cbb40dfb3c0388e6b9fc17ef0936b8c1c576fb404",
+        "bytes": 18404
+      },
+      "config.json": {
+        "sha256": "3fede93f848001145991e1a58858e9f538fa90828a016b77528a0fed54634cec",
+        "bytes": 12150
+      },
+      "controller.py": {
+        "sha256": "7127f847140b67b7af620750f26f88f0ce351ec9f918a1f034bf1315d52a2c81",
+        "bytes": 9852
+      },
+      "node.py": {
+        "sha256": "472e358e4cbe5b842e40f5a6e1ebae32f9e823ff5fbf256bdaa96f6722cefea5",
+        "bytes": 5588
+      },
+      "server.py": {
+        "sha256": "23a17f06f801b9cc2ab49c9a27336a3aedf7369aba4192da8db724b0eca8bd71",
+        "bytes": 3976
+      }
+    },
+    "pd-torch-kernel-cache-ab-20260918-v1": {
+      "ab_driver.py": {
+        "sha256": "c686d8f8cbafc7bf45d5b777b20291cfaf66e9ead90ae779d546355dcc626842",
+        "bytes": 1827
+      },
+      "bundle.json": {
+        "sha256": "264884414bf5b27684525f07f4cec20f4b51d95b5c3a54d37126772b18dacecf",
+        "bytes": 364
+      },
+      "commands.json": {
+        "sha256": "608598b30d4de1bb025c292d460bf5406065df0ed09aec2a0e58f97cc662c862",
+        "bytes": 9230
+      },
+      "config.json": {
+        "sha256": "9c4fb961dcbc9540eb9ecdcd6f2aa2499be96d14b9217c4e981da07f03ab3036",
+        "bytes": 6450
+      },
+      "controller.py": {
+        "sha256": "7127f847140b67b7af620750f26f88f0ce351ec9f918a1f034bf1315d52a2c81",
+        "bytes": 9852
+      },
+      "node.py": {
+        "sha256": "472e358e4cbe5b842e40f5a6e1ebae32f9e823ff5fbf256bdaa96f6722cefea5",
+        "bytes": 5588
+      },
+      "server.py": {
+        "sha256": "23a17f06f801b9cc2ab49c9a27336a3aedf7369aba4192da8db724b0eca8bd71",
+        "bytes": 3976
+      }
+    },
+    "pd-tokenizer-coalesce-ab-20260918-v2": {
+      "ab_driver.py": {
+        "sha256": "aa35653bd8c0d7a7b3f26dadbdaa5186a712a24489131cca9d22b2781102016d",
+        "bytes": 1834
+      },
+      "bundle.json": {
+        "sha256": "ff00eebfbcb57afb2c37f29fe66088bc364a5dfbaec2999bfcfcdf4163b9ce26",
+        "bytes": 364
+      },
+      "commands.json": {
+        "sha256": "705e6903db1d15c22c2461062e5495d1b5837524bad93695da19d19a79463b0e",
+        "bytes": 9230
+      },
+      "config.json": {
+        "sha256": "9ecb9f2b1eba6f4101180d96aa3417fc3bf97422c6f6a0f81fd90fe7487968ab",
+        "bytes": 6768
+      },
+      "controller.py": {
+        "sha256": "7127f847140b67b7af620750f26f88f0ce351ec9f918a1f034bf1315d52a2c81",
+        "bytes": 9852
+      },
+      "node.py": {
+        "sha256": "472e358e4cbe5b842e40f5a6e1ebae32f9e823ff5fbf256bdaa96f6722cefea5",
+        "bytes": 5588
+      },
+      "server.py": {
+        "sha256": "581392d2318da86bb67112df9d85979c38c797c19a107c690f49ada10fafb3fb",
+        "bytes": 5611
+      }
+    },
+    "pd-tokenizer-coalesce-ab-20260918-v3": {
+      "ab_driver.py": {
+        "sha256": "837ca76bffda9cac8a42df21c4bf5ea95978e72cd424662958a58abd43c2f077",
+        "bytes": 1834
+      },
+      "bundle.json": {
+        "sha256": "23b54df4d28edad6df7c4f26d29438fb18da19fc10f2a9713ae2b317c3215d7b",
+        "bytes": 364
+      },
+      "commands.json": {
+        "sha256": "919cab5121d57ccdd05f9c366ac65c26c28247485de5826b0d80c2befa2d10a9",
+        "bytes": 9235
+      },
+      "config.json": {
+        "sha256": "621178327aa726ca421f4b66620a13409c68f9e5a16e527cac1d0a2f3dbc80ec",
+        "bytes": 6768
+      },
+      "controller.py": {
+        "sha256": "7127f847140b67b7af620750f26f88f0ce351ec9f918a1f034bf1315d52a2c81",
+        "bytes": 9852
+      },
+      "node.py": {
+        "sha256": "472e358e4cbe5b842e40f5a6e1ebae32f9e823ff5fbf256bdaa96f6722cefea5",
+        "bytes": 5588
+      },
+      "server.py": {
+        "sha256": "581392d2318da86bb67112df9d85979c38c797c19a107c690f49ada10fafb3fb",
+        "bytes": 5611
+      }
+    }
+  },
+  "redaction": {
+    "excluded": [
+      "node names and addresses",
+      "ports",
+      "credentials",
+      "container and shell commands",
+      "weight and image locations",
+      "raw logs",
+      "raw requests and responses",
+      "request identifiers",
+      "absolute timestamps",
+      "unaggregated metrics"
+    ],
+    "included": [
+      "topology class",
+      "model/runtime mode",
+      "candidate variables",
+      "aggregate correctness and performance observations",
+      "aggregate mechanism counters",
+      "source package checksums"
+    ]
+  },
+  "verification": {
+    "hash_algorithm": "SHA-256",
+    "local_source_packages_checked": true,
+    "completed_candidates_with_exact_checks": 5,
+    "in_progress_candidates_with_request_results": 0
+  }
+}

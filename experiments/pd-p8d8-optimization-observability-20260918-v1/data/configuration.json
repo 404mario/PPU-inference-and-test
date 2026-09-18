@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "common": {
+    "hardware_scope": "two 8-accelerator nodes; 16 accelerators total",
+    "topology": "P8 + D8, attention TP=1, attention DP=8, EP=8",
+    "model": "DeepSeek-V4.1-Flash",
+    "mode": "native P/D STATIC DSpark",
+    "precision": "BF16 activations, FP8 KV, FP8 model with PPU MXFP4 experts",
+    "context_limit_tokens": 32768,
+    "chunked_prefill_per_attention_rank_tokens": 512,
+    "cuda_graph": "disabled",
+    "radix_cache": "disabled",
+    "overlap_schedule": "disabled",
+    "request_shape": "8 concurrent deterministic exact extraction requests; approximately 6.5k input tokens each",
+    "measurement": "1 C8 warmup plus 9 C8 formal rounds; 8 requests per formal round"
+  },
+  "candidates": {
+    "metadata_device": {
+      "scheduler_metadata_collective": "device/PCCL",
+      "tokenizer_microbatch_window_ms": 0,
+      "persistent_torch_kernel_cache": false
+    },
+    "metadata_cpu": {
+      "scheduler_metadata_collective": "CPU/Gloo",
+      "tokenizer_microbatch_window_ms": 0,
+      "persistent_torch_kernel_cache": false
+    },
+    "kernel_cache_precreated": {
+      "scheduler_metadata_collective": "device/PCCL",
+      "tokenizer_microbatch_window_ms": 0,
+      "persistent_torch_kernel_cache": true
+    },
+    "tokenizer_coalesce_10ms": {
+      "scheduler_metadata_collective": "device/PCCL",
+      "tokenizer_microbatch_window_ms": 10,
+      "persistent_torch_kernel_cache": true
+    },
+    "tokenizer_coalesce_500ms_in_progress": {
+      "scheduler_metadata_collective": "device/PCCL",
+      "tokenizer_microbatch_window_ms": 500,
+      "persistent_torch_kernel_cache": true,
+      "status": "starting_or_waiting; no request result published"
+    }
+  }
+}

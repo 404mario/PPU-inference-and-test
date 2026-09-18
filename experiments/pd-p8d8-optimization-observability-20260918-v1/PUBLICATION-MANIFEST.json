@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "experiment": "pd-p8d8-optimization-observability-20260918-v1",
+  "published_at_utc": "2026-09-18",
+  "files": {
+    "REPORT.md": {
+      "bytes": 4363,
+      "sha256": "9a9d2364ef2c5c764281c0fadb0bfe300b15c9cff6c2a6c44a30e54a459f9a74"
+    },
+    "data/README.md": {
+      "bytes": 680,
+      "sha256": "282bd3abfcd284fa7233d5d8a6beba2b17b0c03094cc84eaa1a16181981497e5"
+    },
+    "data/configuration.json": {
+      "bytes": 1715,
+      "sha256": "8d53a2123d8a17427f5c6566f86f566c4ac07084957933db132afbc7093d69b9"
+    },
+    "data/provenance.json": {
+      "bytes": 5659,
+      "sha256": "f5540b6cc38bd627793d2f6addb449071444821c94b456eca0251f19a2973b96"
+    },
+    "data/results.json": {
+      "bytes": 5699,
+      "sha256": "3dee21ad394e5cae33ed019691811b5e476224f64184cea13cd4dc18a8bc38a0"
+    }
+  },
+  "manifest_self_excluded": true,
+  "hash_algorithm": "SHA-256",
+  "publication_checks": {
+    "completed_conditions": 5,
+    "completed_exact_correctness_checks": 360,
+    "in_progress_candidates": 1,
+    "raw_prompts_published": false,
+    "raw_responses_published": false,
+    "raw_logs_published": false,
+    "machine_addresses_published": false,
+    "credentials_published": false,
+    "raw_timestamp_series_published": false
+  },
+  "scope": "P8+D8 EP8 STATIC DSpark observability optimization evidence; not a 64-card topology result or production acceptance"
+}

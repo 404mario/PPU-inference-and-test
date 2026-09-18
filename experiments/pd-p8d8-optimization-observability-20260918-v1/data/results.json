@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "experiment": "pd-p8d8-optimization-observability-20260918-v1",
+  "unit_notes": {
+    "duration_s": "seconds",
+    "throughput_token_s": "completed output tokens per second over the C8 formal round",
+    "correctness": "deterministic exact-extraction checks",
+    "aggregation": "median over 9 formal C8 rounds unless otherwise stated"
+  },
+  "common_window": {
+    "warmup": {
+      "rounds": 1,
+      "concurrent_requests_per_round": 8
+    },
+    "formal": {
+      "rounds": 9,
+      "concurrent_requests_per_round": 8,
+      "total_requests": 72
+    },
+    "request_shape": "approximately 6.5k input tokens per request; deterministic exact extraction",
+    "output_tokens_per_round": "2697 or 2702; request text and response text withheld"
+  },
+  "completed_candidates": [
+    {
+      "id": "metadata_device_pccl",
+      "status": "completed",
+      "comparison_group": "d_scheduler_metadata_collective",
+      "variable": {
+        "scheduler_metadata_collective": "device/PCCL"
+      },
+      "correctness": {
+        "passed": 72,
+        "total": 72
+      },
+      "median": {
+        "makespan_s": 32.0664,
+        "effective_output_token_s": 84.1067,
+        "d_forward_s": 10.7039
+      },
+      "role": "reference",
+      "decision": "reference"
+    },
+    {
+      "id": "metadata_cpu_gloo",
+      "status": "completed",
+      "comparison_group": "d_scheduler_metadata_collective",
+      "variable": {
+        "scheduler_metadata_collective": "CPU/Gloo"
+      },
+      "correctness": {
+        "passed": 72,
+        "total": 72
+      },
+      "median": {
+        "makespan_s": 34.8132,
+        "effective_output_token_s": 77.4706,
+        "d_forward_s": 10.751
+      },
+      "relative_to": "metadata_device_pccl",
+      "relative_median": {
+        "makespan_ratio": 1.08566,
+        "effective_output_token_s_ratio": 0.9211
+      },
+      "decision": "rejected: slower end-to-end and no D-forward improvement"
+    },
+    {
+      "id": "torch_kernel_cache_unprepared",
+      "status": "completed",
+      "comparison_group": "torch_kernel_cache_directory",
+      "variable": {
+        "persistent_torch_kernel_cache": "not precreated"
+      },
+      "correctness": {
+        "passed": 72,
+        "total": 72
+      },
+      "median": {
+        "makespan_s": 32.0664,
+        "effective_output_token_s": 84.1067
+      },
+      "role": "reference",
+      "decision": "reference"
+    },
+    {
+      "id": "torch_kernel_cache_precreated",
+      "status": "completed",
+      "comparison_group": "torch_kernel_cache_directory",
+      "variable": {
+        "persistent_torch_kernel_cache": "precreated and writable"
+      },
+      "correctness": {
+        "passed": 72,
+        "total": 72
+      },
+      "median": {
+        "makespan_s": 34.9052,
+        "effective_output_token_s": 77.2664
+      },
+      "relative_to": "torch_kernel_cache_unprepared",
+      "relative_median": {
+        "makespan_ratio": 1.08853,
+        "effective_output_token_s_ratio": 0.91867
+      },
+      "operational_observation": "cache-directory warning removed and cache writes observed",
+      "decision": "keep as deployment hygiene only; rejected as a throughput optimization"
+    },
+    {
+      "id": "tokenizer_coalesce_10ms",
+      "status": "completed",
+      "comparison_group": "tokenizer_microbatch_window",
+      "variable": {
+        "tokenizer_microbatch_window_ms": 10
+      },
+      "correctness": {
+        "passed": 72,
+        "total": 72
+      },
+      "median": {
+        "makespan_s": 33.9762,
+        "effective_output_token_s": 79.5262,
+        "p_scheduler_entry_spread_s": 0.343,
+        "same_round_completion_spread_s": 11.3157,
+        "p_forward_s": 22.4423,
+        "d_forward_s": 10.9361
+      },
+      "p95": {
+        "p_scheduler_entry_spread_s": 0.3582
+      },
+      "count": {
+        "delayed_final_512_token_chunk_rounds": 7,
+        "formal_rounds": 9
+      },
+      "relative_to": "metadata_device_pccl",
+      "relative_median": {
+        "makespan_ratio": 1.05956,
+        "effective_output_token_s_ratio": 0.94554
+      },
+      "decision": "rejected: entry skew and delayed-final-chunk pattern remained"
+    }
+  ],
+  "mechanism_observations": {
+    "attention_dp": 8,
+    "global_chunked_prefill_size_tokens": 4096,
+    "effective_chunked_prefill_per_attention_rank_tokens": 512,
+    "approximately_6500_token_input_chunks": 13,
+    "baseline": {
+      "p_scheduler_entry_spread_median_s": 0.349,
+      "p_scheduler_entry_spread_p95_s": 0.392,
+      "same_round_completion_spread_median_s": 10.87,
+      "delayed_final_chunk_rounds": {
+        "count": 7,
+        "denominator": 9,
+        "delay_threshold_s": 5
+      }
+    },
+    "interpretation": "sub-second rank entry skew can be amplified by chunk scheduling into discrete P-forward waves; this is an observation for this workload, not a universal causal proof"
+  },
+  "in_progress_candidates": [
+    {
+      "id": "tokenizer_coalesce_500ms",
+      "status": "starting_or_waiting_services_at_publication",
+      "variable": {
+        "tokenizer_microbatch_window_ms": 500
+      },
+      "formal_rounds_completed": 0,
+      "requests_completed": 0,
+      "performance_result_published": false,
+      "publication_rule": "do not compare with completed candidates until request execution, correctness, and result collection finish"
+    }
+  ],
+  "release_boundary": {
+    "raw_requests_responses_logs_metrics_published": false,
+    "per_round_raw_timestamps_published": false,
+    "released_measurements": "candidate-level aggregate observations and mechanism counters only",
+    "reason": "prevent recovery of private prompts, identifiers, node topology, or operational environment"
+  }
+}
